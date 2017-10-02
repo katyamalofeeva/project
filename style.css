@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 body {
+  font-family: 'Roboto Condensed', sans-serif;
 font-family: 'Roboto', sans-serif;
 font-size: 18px;
 color: #161616;
@@ -93,28 +94,32 @@ color: #161616;
 
 .text-shadow {
   text-shadow: 5px 5px 1px silver;
-
 }
 
 .header {
   position: relative;
   border: 1px dashed black;
-
 }
 
-
 .h1 {
-  text-shadow: 5px 5px 1px silver;
+  text-shadow: 7px 7px 3px gray;
+  font-family: 'roboto condensed', sans-serif;
   font-weight: 600;
   display: inline-block;
   position: relative;
   left: 15px;
 }
 
+.h2 {
+  text-shadow: 5px 5px 2px rgba(190, 231, 249, 0.8);
+}
+
 .nav {
   display: inline-block;
   position: relative;
-  right: -25px;
+  left: 35px;
+  padding: 5px;
+  font-family: 'roboto condensed', sans-serif;
 }
 
 .main {
@@ -123,20 +128,49 @@ color: #161616;
 
 .section {
   display: inline-block;
-  width: 600px;
-  margin: 20px;
+  width: 610px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px dashed black;
+  font-family: 'roboto', sans-serif;
+}
+
+.heading {
+  padding: 5px;
 }
 
 .article {
   overflow: auto;
   width: 600px;
   height: 150px;
+  padding: 5px;
+  margin: 5px;
+  background-color: rgba(190, 231, 249, 0.29);
+}
 
+.exlink {
+  display: block;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'roboto condensed', sans-serif;
 }
 
 .aside {
   display: inline-block;
-  width: 100px;
+  width: 130px;
   margin: 20px;
+  margin-right: 10px;
   position: absolute;
+  right: 0px;
+  padding: 5px;
+  border: 1px dashed black;
+}
+
+.footer {
+  width: 760px;
+  padding: 5px;
+  border: 1px dashed black;
+  position: relative;
+  bottom: 0px;
 }
