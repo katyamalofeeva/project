@@ -142,7 +142,7 @@ color: #161616;
 .article {
   overflow: auto;
   width: 600px;
-  height: 150px;
+  height: 180px;
   padding: 5px;
   margin: 5px;
   background-color: rgba(190, 231, 249, 0.29);
