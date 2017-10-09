@@ -1,58 +1,60 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Roboto Condensed', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-size: 18px;
-color: #161616;
-
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #161616;
+  padding: 2px;
 }
 
 /* эксперименты с position */
+
 .position-parent {
-    width: 200px;
-    height: 300px;
-    background: pink;
-    position: relative;
-    margin: 50px;
+  width: 200px;
+  height: 300px;
+  background: pink;
+  position: relative;
+  margin: 50px;
 }
 
 .position-child {
-    height: 300px;
-    background: violet;
-    position: relative;
-    left: 100px;
-    top: 100px;
+  height: 300px;
+  background: violet;
+  position: relative;
+  left: 100px;
+  top: 100px;
 }
 
 .position-child-absolute {
-    width: 100px;
-    height: 300px;
-    background: gray;
-    position: absolute;
-    left: 100px;
-    top: 100px;
+  width: 100px;
+  height: 300px;
+  background: gray;
+  position: absolute;
+  left: 100px;
+  top: 100px;
 }
 
 .position-child-fixed {
-    width: 100px;
-    height: 300px;
-    background: green;
-    position: fixed;
-    right: 100px;
-    top: 100px;
+  width: 100px;
+  height: 300px;
+  background: green;
+  position: relative;
+  right: 100px;
+  top: 100px;
 }
 
 .position-child-z-index {
-    width: 100px;
-    height: 300px;
-    background: purple;
-    position: absolute;
+  width: 100px;
+  height: 300px;
+  background: purple;
+  position: absolute;
 }
 
 .z-index-1 {
-  left:50px;
+  left: 50px;
   top: 50px;
   background: red;
   z-index: 3;
@@ -62,7 +64,7 @@ color: #161616;
   left: 100px;
   top: 100px;
   background: green;
-  z-index: 2;
+  z-index: 0;
 }
 
 .z-index-3 {
@@ -71,12 +73,14 @@ color: #161616;
   background: blue;
   z-index: 1;
 }
+
 /* эксперименты с font */
+
 .font {
   padding: 100px 0;
 }
 
-.font-size{
+.font-size {
   font-size: 30px;
 }
 
@@ -145,7 +149,7 @@ color: #161616;
   height: 180px;
   padding: 5px;
   margin: 5px;
-  background-color: rgba(190, 231, 249, 0.29);
+  background-color: rgb(223, 238, 245);
 }
 
 .exlink {
@@ -163,7 +167,10 @@ color: #161616;
   margin-right: 10px;
   position: absolute;
   right: 0px;
+  top: 0px;
+  bottom: 0px;
   padding: 5px;
+  padding-top: 120px;
   border: 1px dashed black;
 }
 
@@ -173,4 +180,330 @@ color: #161616;
   border: 1px dashed black;
   position: relative;
   bottom: 0px;
+}
+
+/* background image */
+
+.background-image-svg {
+  width: 100px;
+  height: 100px;
+  margin: 100px;
+  background-image: url("img/bank.svg");
+  background-repeat: repeat;
+}
+
+.background-image-img {
+  width: 900px;
+  height: 200px;
+  margin: 10px;
+  background-image: url("img/rain.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*flexbox*/
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 400px;
+  margin: 50px;
+  border: 1px solid navy;
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+}
+
+.flex-element {
+  width: 70px;
+}
+
+.flex-element-1 {
+  order: 3;
+  background-color: fuchsia;
+}
+
+.flex-element-2 {
+  order: 4;
+  background-color: purple;
+}
+
+.flex-element-3 {
+  flex-grow: 5;
+  order: 2;
+  background-color: pink;
+}
+
+.flex-element-4 {
+  order: 5;
+  background-color: violet;
+}
+
+.flex-element-5 {
+  order: 1;
+  background-color: silver;
+}
+
+/*backround color*/
+
+.background-color {
+  height: 200px;
+  width: 200px;
+  background-color: grey;
+  position: relative;
+}
+
+.background-color-child {
+  height: 200px;
+  width: 200px;
+  background-color: rgba(255, 0, 0, 0.5);
+  background-image: url(img/diamond.svg);
+  position: absolute;
+  border: 1px solid pink;
+  top: 50px;
+  left: 50px;
+  border-radius: 50%;
+}
+
+/*linear gradient*/
+
+.linear-gradient {
+  width: 200px;
+  height: 200px;
+  margin: 50px;
+  background-image: linear-gradient(gray, black);
+}
+
+.linear-gradient-2 {
+  width: 200px;
+  height: 200px;
+  margin: 50px;
+  background-image: linear-gradient(to bottom left, lightblue, black);
+}
+
+.linear-gradient-1 {
+  width: 200px;
+  height: 200px;
+  margin: 50px;
+  background-image: linear-gradient(270deg, red, black);
+}
+
+.linear-gradient-3 {
+  width: 300px;
+  height: 300px;
+  margin: 50px;
+  background-image: linear-gradient(yellow, lightblue, green, blue, purple);
+}
+
+.linear-gradient-4 {
+  width: 300px;
+  height: 300px;
+  margin: 50px;
+  background-image: linear-gradient(red 30%, orange 50%, yellow 70%, green 100%);
+}
+
+.radial-gradient {
+  width: 400px;
+  height: 400px;
+  background-image: radial-gradient(pink, blue);
+  margin: 50px;
+}
+
+.radial-gradient-1 {
+  width: 400px;
+  height: 400px;
+  background-image: radial-gradient(at left bottom, pink, blue);
+  margin: 50px;
+}
+
+.radial-gradient-2 {
+  width: 400px;
+  height: 400px;
+  background-image: radial-gradient(circle, pink, blue);
+  margin: 50px;
+}
+
+.gradient-generator {
+  background-image: radial-gradient(ellipse at center, #b3dced 0%, #29b8e5 46%, #bce0ee 100%);
+  width: 400px;
+  height: 400px;
+  margin: 50px;
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.box-shadow {
+  width: 150px;
+  height: 150px;
+  box-shadow: 10px 15px 5px 1px black;
+  margin: 30px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.box-shadow-inset {
+  width: 150px;
+  height: 150px;
+  box-shadow: inset 5px 10px 5px blue;
+  margin: 30px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.calc-parent {
+  display: flex;
+  height: 300px;
+  margin: 50px;
+  border: 2px solid black;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+. .calc-child {
+  width: calc(50% - 20px);
+  margin: 0 10px;
+  background-color: lightblue;
+}
+
+.calc-child-part {
+  width: calc(100% / 7 - 10px);
+  background-color: green;
+  margin: 0 5px;
+}
+
+.calc-parent-2 {
+  display: flex;
+  height: 200px;
+  border: 1px solid gray;
+  margin: 50px;
+}
+
+.calc-child-fixed {
+  width: 100px;
+  background-color: blue;
+  margin: 20px;
+}
+
+.calc-child-responsive {
+  width: calc(100% - 100px + 20px);
+  background-color: yellow;
+}
+
+/*hover*/
+
+.hover {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  background-color: red;
+}
+
+.hover:hover {
+  background-color: lightblue;
+  border: 1px dashed black;
+  width: 50px;
+  height: 50px;
+}
+
+.linkhover {
+  color: green;
+  font-size: 30px;
+}
+
+.linkhover:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.focus {
+  height: 50px;
+  outline: 0;
+  border: 1px solid blue;
+  padding: 10px;
+  width: 150px;
+  border-radius: 10px;
+}
+
+.focus:focus {
+  box-shadow: inset 0 0 15px 0 rgba(1, 1, 0, .8)
+}
+
+.pseudo-classes-parent {
+  padding: 20px;
+  border: 1px dashed black;
+  margin: 20px;
+  height: auto;
+  background-color: turquoise;
+}
+
+.pseudo-classes-child {
+  border: 1px solid gray;
+  margin: 50px;
+  height: 20px;
+}
+
+.pseudo-classes-child:first-child {
+  background-color: blue;
+  margin-top: 0px;
+}
+
+.pseudo-classes-child:last-child {
+  background-color: green;
+  margin-bottom: 0px;
+}
+
+.pseudo-classes-child:nth-child(2) {
+  border-color: red;
+}
+
+.pseudo-classes-child:nth-child(2n) {
+  background-color: gray;
+}
+
+.pseudo-classes-child:nth-child(2n+1) {
+  background-color: darkgray;
+}
+
+/*pseudo-elements before after*/
+
+.pseudo-elements:before {
+  content: 'я впереди всего текста.';
+  color: red;
+}
+
+.pseudo-elements:after {
+  content: 'я после всего текста';
+  color: blue;
+}
+
+/*transition. Все пишется в изначальных значениях, дополнительные задаются через псевдокласс с элементами*/
+
+.transition-color {
+  font-size: 30px;
+  color: black;
+  transition: color 1s ease 1s,
+  font-size 2s ease-out;
+}
+
+.transition-color:hover {
+  color: red;
+  font-size: 50px;
+}
+
+.transition-left {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  margin: 40px;
+  position: relative;
+  left:0;
+  transition: left 3s ease-in 1s, width 2s linear;
+  background-color: gray;
+}
+
+.transition-left:hover {
+  left: 200px;
+  width: 300px;
 }
