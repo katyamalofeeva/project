@@ -97,42 +97,85 @@ body {
 }
 
 .text-shadow {
-  text-shadow: 5px 5px 1px silver;
+  text-shadow: 5px 5px 1px #97999b;
 }
 
 .header {
-  position: relative;
-  border: 1px dashed black;
+  border: 1px dashed rgba(50, 85, 59, 1);
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: auto;
+
+  justify-content: space-around;
+  align-items: left;
+  align-content: space-around;
 }
 
+.header-gallery {
+  border: 1px dashed rgba(50, 85, 59, 1);
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: auto;
+  justify-content: space-around;
+  align-items: left;
+  align-content: space-around;
+}
+
+
+
 .h1 {
-  text-shadow: 7px 7px 3px gray;
+  text-shadow: 7px 7px 3px #97999b;
   font-family: 'roboto condensed', sans-serif;
   font-weight: 600;
-  display: inline-block;
-  position: relative;
-  left: 15px;
+  color: rgba(50, 85, 59, 1);
+  left: 50px;
+  width: 500px;
+  padding-left:  15px;
+  padding-right: 15px;
 }
 
 .h2 {
-  text-shadow: 5px 5px 2px rgba(190, 231, 249, 0.8);
+  text-shadow: 5px 5px 2px #97999b;
+  color: rgb(50, 85, 59);
 }
 
-.nav {
-  display: inline-block;
-  position: relative;
-  left: 35px;
-  padding: 5px;
+.nav-header {
+  padding: 15px;
   font-family: 'roboto condensed', sans-serif;
+  text-align: right;
+  color: rgb(107, 165, 57);
+}
+.nav {
+
+  padding: 15px;
+  font-family: 'roboto condensed', sans-serif;
+  text-align: left;
+  color: rgb(107, 165, 57);
+}
+.a:hover {
+  color: rgb(220,134,153);
+  font-size: 20px;
+  background-color: rgba(151, 153, 155, 0.17);
+  transition: 1s ease;
 }
 
 .main {
-  position: relative;
+position: relative;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  width: auto;
+
 }
 
 .section {
   display: inline-block;
-  width: 610px;
   margin-top: 20px;
   margin-bottom: 20px;
   border: 1px dashed black;
@@ -141,6 +184,7 @@ body {
 
 .heading {
   padding: 5px;
+  color: rgb(89,117,77);
 }
 
 .article {
@@ -149,7 +193,7 @@ body {
   height: 180px;
   padding: 5px;
   margin: 5px;
-  background-color: rgb(223, 238, 245);
+  background-color: rgba(151, 153, 155, 0.17);
 }
 
 .exlink {
@@ -158,6 +202,15 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
   font-family: 'roboto condensed', sans-serif;
+  color: rgb(107, 165, 57);
+
+}
+
+.exlink:hover {
+  color: rgb(220,134,153);
+  font-size: 20px;
+  background-color: rgba(151, 153, 155, 0.17);
+  transition: 1s ease;
 }
 
 .aside {
@@ -165,16 +218,18 @@ body {
   width: 130px;
   margin: 20px;
   margin-right: 10px;
-  position: absolute;
   right: 0px;
-  top: 0px;
+  top: 115px;
   bottom: 0px;
   padding: 5px;
-  padding-top: 120px;
+  width: calc(15%);
   border: 1px dashed black;
+  overflow: auto;
+
 }
 
 .footer {
+  display: flex;
   width: 760px;
   padding: 5px;
   border: 1px dashed black;
@@ -182,6 +237,16 @@ body {
   bottom: 0px;
 }
 
+.footer-1 {
+  width: calc(50%);
+  margin: 10px;
+}
+
+
+  .footer-2{
+    width: calc(50%);
+    margin: 10px;
+  }
 /* background image */
 
 .background-image-svg {
