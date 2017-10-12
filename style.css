@@ -102,18 +102,20 @@ body {
 
 .header {
   border: 1px dashed rgba(50, 85, 59, 1);
+  border-radius: 15px;
   display: flex;
   flex-direction: row;
   width: auto;
   height: auto;
-
   justify-content: space-around;
   align-items: left;
   align-content: space-around;
+  box-shadow: inset 0px 0px 5px 5px rgb(223, 236, 228);
 }
 
 .header-gallery {
   border: 1px dashed rgba(50, 85, 59, 1);
+  border-radius: 15px;
   display: flex;
   flex-direction: row;
   width: auto;
@@ -122,8 +124,6 @@ body {
   align-items: left;
   align-content: space-around;
 }
-
-
 
 .h1 {
   text-shadow: 7px 7px 3px #97999b;
@@ -132,13 +132,14 @@ body {
   color: rgba(50, 85, 59, 1);
   left: 50px;
   width: 500px;
-  padding-left:  15px;
+  padding-left: 15px;
   padding-right: 15px;
 }
 
 .h2 {
   text-shadow: 5px 5px 2px #97999b;
   color: rgb(50, 85, 59);
+  margin: 10px;
 }
 
 .nav-header {
@@ -147,22 +148,32 @@ body {
   text-align: right;
   color: rgb(107, 165, 57);
 }
-.nav {
 
+.nav {
   padding: 15px;
   font-family: 'roboto condensed', sans-serif;
   text-align: left;
   color: rgb(107, 165, 57);
 }
+
+.a {
+  color: rgb(89, 117, 77);
+}
+
 .a:hover {
-  color: rgb(220,134,153);
-  font-size: 20px;
+  color: rgb(220, 134, 153);
   background-color: rgba(151, 153, 155, 0.17);
   transition: 1s ease;
 }
 
+a:-webkit-any-link {
+  color: rgb(151, 153, 155);
+  cursor: auto;
+  text-decoration: underline;
+}
+
 .main {
-position: relative;
+  position: relative;
 }
 
 .main-container {
@@ -171,20 +182,22 @@ position: relative;
   flex-wrap: wrap;
   height: auto;
   width: auto;
-
 }
 
 .section {
   display: inline-block;
   margin-top: 20px;
   margin-bottom: 20px;
-  border: 1px dashed black;
+  border: 1px dashed rgb(50, 85, 59);
+  border-radius: 15px;
   font-family: 'roboto', sans-serif;
+  box-shadow: inset 0px 0px 5px 5px rgb(223, 236, 228);
 }
 
 .heading {
   padding: 5px;
-  color: rgb(89,117,77);
+  color: rgb(89, 117, 77);
+  margin: 3px;
 }
 
 .article {
@@ -193,7 +206,7 @@ position: relative;
   height: 180px;
   padding: 5px;
   margin: 5px;
-  background-color: rgba(151, 153, 155, 0.17);
+  background-image: linear-gradient( rgba(151, 153, 155, 0.01), rgba(151, 153, 155, 0.9));
 }
 
 .exlink {
@@ -203,11 +216,10 @@ position: relative;
   margin-bottom: 10px;
   font-family: 'roboto condensed', sans-serif;
   color: rgb(107, 165, 57);
-
 }
 
 .exlink:hover {
-  color: rgb(220,134,153);
+  color: rgb(220, 134, 153);
   font-size: 20px;
   background-color: rgba(151, 153, 155, 0.17);
   transition: 1s ease;
@@ -223,18 +235,21 @@ position: relative;
   bottom: 0px;
   padding: 5px;
   width: calc(15%);
-  border: 1px dashed black;
+  border: 1px dashed rgba(50, 85, 59, 1);
+  border-radius: 15px;
   overflow: auto;
-
+  box-shadow: inset 0px 0px 5px 5px rgb(223, 236, 228);
 }
 
 .footer {
   display: flex;
   width: 760px;
   padding: 5px;
-  border: 1px dashed black;
+  border: 1px dashed rgba(50, 85, 59, 1);
+  border-radius: 15px;
   position: relative;
   bottom: 0px;
+  box-shadow: inset 0px 0px 5px 5px rgb(223, 236, 228);
 }
 
 .footer-1 {
@@ -242,11 +257,41 @@ position: relative;
   margin: 10px;
 }
 
+.footer-2 {
+  width: calc(50%);
+  margin: 10px;
+}
 
-  .footer-2{
-    width: calc(50%);
-    margin: 10px;
-  }
+.gallery {
+  display: inline-flex;
+  padding: 15px;
+  margin: 15px;
+  margin-left: 0px;
+  overflow: auto;
+  height: 300px;
+  width: auto;
+  padding: 10px;
+
+}
+
+.image {
+  height: 200px;
+  padding: 5px;
+  border: dashed 1px green;
+  border-radius: 15px;
+  opacity: 0.5;
+  filter: grayscale(1);
+  z-index: auto;
+  width: 120px;
+  transition: grayscale 3s ease, opacity 3s ease, width 3s ease;
+}
+
+.image:hover {
+  filter: none;
+  opacity: 1;
+  width: auto;
+}
+
 /* background image */
 
 .background-image-svg {
@@ -548,8 +593,7 @@ position: relative;
 .transition-color {
   font-size: 30px;
   color: black;
-  transition: color 1s ease 1s,
-  font-size 2s ease-out;
+  transition: color 1s ease 1s, font-size 2s ease-out;
 }
 
 .transition-color:hover {
@@ -563,7 +607,7 @@ position: relative;
   border: 1px solid black;
   margin: 40px;
   position: relative;
-  left:0;
+  left: 0;
   transition: left 3s ease-in 1s, width 2s linear;
   background-color: gray;
 }
