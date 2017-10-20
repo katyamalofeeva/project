@@ -7,99 +7,11 @@
 body {
   font-family: 'Roboto Condensed', sans-serif;
   font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
   font-size: 18px;
   color: #161616;
   padding: 2px;
-}
-
-/* эксперименты с position */
-
-.position-parent {
-  width: 200px;
-  height: 300px;
-  background: pink;
-  position: relative;
-  margin: 50px;
-}
-
-.position-child {
-  height: 300px;
-  background: violet;
-  position: relative;
-  left: 100px;
-  top: 100px;
-}
-
-.position-child-absolute {
-  width: 100px;
-  height: 300px;
-  background: gray;
-  position: absolute;
-  left: 100px;
-  top: 100px;
-}
-
-.position-child-fixed {
-  width: 100px;
-  height: 300px;
-  background: green;
-  position: relative;
-  right: 100px;
-  top: 100px;
-}
-
-.position-child-z-index {
-  width: 100px;
-  height: 300px;
-  background: purple;
-  position: absolute;
-}
-
-.z-index-1 {
-  left: 50px;
-  top: 50px;
-  background: red;
-  z-index: 3;
-}
-
-.z-index-2 {
-  left: 100px;
-  top: 100px;
-  background: green;
-  z-index: 0;
-}
-
-.z-index-3 {
-  left: 150px;
-  top: 150px;
-  background: blue;
-  z-index: 1;
-}
-
-/* эксперименты с font */
-
-.font {
-  padding: 100px 0;
-}
-
-.font-size {
-  font-size: 30px;
-}
-
-.font-weight {
-  font-weight: 700;
-}
-
-.font-style {
-  font-style: oblique;
-}
-
-.font-variant {
-  font-variant: small-caps;
-}
-
-.text-shadow {
-  text-shadow: 5px 5px 1px #97999b;
+  border-radius: 20px;
 }
 
 .header {
@@ -149,14 +61,13 @@ body {
   padding: 15px;
   font-family: 'roboto condensed', sans-serif;
   text-align: right;
-  color: rgb(107, 165, 57);
+
 }
 
 .nav {
   padding: 15px;
   font-family: 'roboto condensed', sans-serif;
   text-align: left;
-  color: rgb(107, 165, 57);
 }
 
 .a {
@@ -195,6 +106,7 @@ a:-webkit-any-link {
   border-radius: 15px;
   font-family: 'roboto', sans-serif;
   box-shadow: inset 0px 0px 5px 5px rgb(223, 236, 228);
+
 }
 
 .heading {
@@ -210,6 +122,8 @@ a:-webkit-any-link {
   padding: 5px;
   margin: 5px;
   background-image: linear-gradient( rgba(151, 153, 155, 0.01), rgba(151, 153, 155, 0.9));
+  border-radius: 15px;
+  box-shadow: inset 0px 0px 5px 5px gainsboro;
 }
 
 .exlink {
@@ -246,13 +160,20 @@ a:-webkit-any-link {
 
 .footer {
   display: flex;
-  width: 760px;
+
   padding: 5px;
   border: 1px dashed rgba(50, 85, 59, 1);
   border-radius: 15px;
   position: relative;
   bottom: 0px;
   box-shadow: inset 0px 0px 5px 5px rgb(223, 236, 228);
+
+  flex-direction: row;
+  width: auto;
+  height: auto;
+  justify-content: space-around;
+  align-items: left;
+  align-content: space-around;
 }
 
 .footer-1 {
@@ -279,19 +200,20 @@ a:-webkit-any-link {
 .image {
   height: 200px;
   padding: 5px;
-  border: dashed 1px green;
+  border: dashed 1px gainsboro;
   border-radius: 15px;
   opacity: 0.5;
   filter: grayscale(1);
   z-index: auto;
-  width: 120px;
+  width: 200px;
   transition: grayscale 3s ease, opacity 3s ease, width 3s ease;
 }
 
 .image:hover {
   filter: none;
   opacity: 1;
-  width: 180px;
+  width: 300px;
+
 }
 
 /* background image */
@@ -816,4 +738,96 @@ a:-webkit-any-link {
 
 .toggled {
   background-color: red;
+}
+
+
+
+/* эксперименты с position */
+
+.position-parent {
+  width: 200px;
+  height: 300px;
+  background: pink;
+  position: relative;
+  margin: 50px;
+}
+
+.position-child {
+  height: 300px;
+  background: violet;
+  position: relative;
+  left: 100px;
+  top: 100px;
+}
+
+.position-child-absolute {
+  width: 100px;
+  height: 300px;
+  background: gray;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+}
+
+.position-child-fixed {
+  width: 100px;
+  height: 300px;
+  background: green;
+  position: relative;
+  right: 100px;
+  top: 100px;
+}
+
+.position-child-z-index {
+  width: 100px;
+  height: 300px;
+  background: purple;
+  position: absolute;
+}
+
+.z-index-1 {
+  left: 50px;
+  top: 50px;
+  background: red;
+  z-index: 3;
+}
+
+.z-index-2 {
+  left: 100px;
+  top: 100px;
+  background: green;
+  z-index: 0;
+}
+
+.z-index-3 {
+  left: 150px;
+  top: 150px;
+  background: blue;
+  z-index: 1;
+}
+
+/* эксперименты с font */
+
+.font {
+  padding: 100px 0;
+}
+
+.font-size {
+  font-size: 30px;
+}
+
+.font-weight {
+  font-weight: 700;
+}
+
+.font-style {
+  font-style: oblique;
+}
+
+.font-variant {
+  font-variant: small-caps;
+}
+
+.text-shadow {
+  text-shadow: 5px 5px 1px #97999b;
 }
